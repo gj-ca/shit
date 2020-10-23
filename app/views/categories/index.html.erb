@@ -1,0 +1,5 @@
+<h1>All Categories</h1>
+
+<% @categories.each do |category| %>
+    <p>id:<%= category.id %>; name: <%= category.name %>, created by: <%= category.user.username %></p>
+<% end %>
