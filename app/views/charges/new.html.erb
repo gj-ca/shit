@@ -1,0 +1,18 @@
+<h1>New charge</h1>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<button id="button">Pay Now</button> 
+
+<script>
+
+    // function redirectToStripe() {
+        var stripe = Stripe("<%= ENV["PUBLIC_API_KEY"] %>")
+    
+        stripe.redirectToCheckout({
+            sessionId: "<%= @session.id %>"
+        })
+    // }
+
+    // document.querySelector("#button").addEventListener("click", redirectToStripe)
+</script>

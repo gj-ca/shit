@@ -4,6 +4,10 @@ class ItemsController < ApplicationController
         @categories = Category.all
     end
 
+    def index
+       @items = Item.all 
+    end
+
     def create
         # redirect_to items_path
         # item = Item.new(item_params)
